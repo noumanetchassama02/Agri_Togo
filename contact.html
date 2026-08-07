@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGRI‑TOGO | Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header commun -->
+  <header>
+    <div class="logo">AGRI‑TOGO</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="produits.html">Produits</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="contact.html">Nous-Contacter</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Section Contact -->
+  <section class="contact">
+    <h1>Nous contacter</h1>
+
+    <div class="contact-container">
+      <!-- Formulaire -->
+      <form id="contactForm">
+        <label for="nom">Nom :</label><br>
+        <input type="text" id="nom" name="nom" required><br>
+
+        <label for="email">Email :</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="sujet">Sujet :</label><br>
+        <input type="text" id="sujet" name="sujet" required><br>
+
+        <label for="message">Message :</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br>
+
+        <button type="submit">Envoyer</button>
+      </form>
+
+      <!-- Coordonnées -->
+      <div class="infos">
+        <h2>Coordonnées</h2>
+        <p><strong>Adresse :</strong> Lomé, Région Maritime, Togo</p>
+        <p><strong>Téléphone :</strong> +228 90 00 00 00</p>
+        <p><strong>Email :</strong> contact@agritogo.tg</p>
+
+        <!-- Carte -->
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.123456789!2d1.212!3d6.131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023abcd123456%3A0x9876543210!2sLom%C3%A9%2C%20Togo!5e0!3m2!1sfr!2stg!4v1690000000000"
+          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer commun -->
+  <footer>
+    <p>&copy; 2026 AGRI‑TOGO — Tous droits réservés</p>
+    <div class="socials">
+      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGRI‑TOGO | Produits</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header commun -->
+  <header>
+    <div class="logo">AGRI‑TOGO</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="produits.html">Produits</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="contact.html">Nous-contacter</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Galerie Produits -->
+  <section class="products">
+    <h1>Nos Produits</h1>
+
+    <!-- Filtres -->
+    <div class="filters">
+      <button onclick="filterProducts('all')">Tous</button>
+      <button onclick="filterProducts('cereales')">Céréales</button>
+      <button onclick="filterProducts('tubercules')">Tubercules</button>
+      <button onclick="filterProducts('fruits')">Fruits</button>
+      <button onclick="filterProducts('transformes')">Produits transformés</button>
+    </div>
+
+    <!-- Galerie -->
+    <div class="gallery" id="gallery">
+      <!-- Injecté par JS -->
+    </div>
+  </section>
+
+  <!-- Footer commun -->
+  <footer>
+    <p>&copy; 2026 AGRI‑TOGO — Tous droits réservés</p>
+    <div class="socials">
+      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
