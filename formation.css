@@ -1,0 +1,142 @@
+/* ==========================
+   PAGE ARTICLE FORMATION
+========================== */
+
+.article {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Titre */
+
+.article h1 {
+    text-align: center;
+    color: #2E7D32;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Date */
+
+.article .date {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+/* Image */
+
+.article img {
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+/* Texte */
+
+.article p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Bouton retour */
+
+.article a {
+    display: inline-block;
+    background: #2E7D32;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.article a:hover {
+    background: #1B5E20;
+}
+
+
+/* ==========================
+   HEADER
+========================== */
+
+header {
+    background: #2E7D32;
+    color: white;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #FBC02D;
+}
+
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+    background: #8D6E63;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px) {
+
+    .article {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .article h1 {
+        font-size: 1.8rem;
+    }
+
+    .article img {
+        height: 250px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+}

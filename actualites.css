@@ -1,0 +1,322 @@
+/* Variables globales */
+:root {
+  --primary-color: #2e7d32;   /* Vert agricole */
+  --secondary-color: #8d6e63; /* Brun terre */
+  --accent-color: #fbc02d;    /* Jaune soleil */
+  --text-color: #333;
+  --bg-light: #f9f9f9;/* --- Styles généraux --- */
+}
+
+/* --- Bannière --- */
+.banner {
+  background: url(images/banniere.jpg) center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.banner h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 1.2em;
+}
+
+/* --- Chiffres clés --- */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  background: #f4f4f4;
+  padding: 30px 20px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat h2 {
+  color: #2c7a2c;
+  margin: 0;
+  font-size: 2em;
+}
+
+header {
+  background: var(--primary-color);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  position: relative;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold; /* nav en bold */
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background: var(--primary-color);
+    position: absolute;
+    top: 60px;
+    right: -220px; /* caché hors écran */
+    width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 6px 6px;
+    transition: right 0.3s ease-in-out;
+  }
+
+  nav ul.show {
+    right: 0; /* glisse vers l’écran */
+  }
+
+  nav ul li {
+    margin: 1rem 0;
+  }
+}
+
+
+header nav a:hover {
+  color: var(--accent-color);
+}
+
+#news-list {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Style des cartes d’actualités */
+.news-card {
+  background: white;
+  border-left: 5px solid var(--primary-color); /* comme les blocs À propos */
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.news-card img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.news-content {
+  flex: 1;
+}
+
+.news-content h3 {
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.news-content p {
+  margin: 0.3rem 0;
+  color: var(--text-color);
+}
+
+.news-content a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.news-content a:hover {
+  background: var(--accent-color);
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .news-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .news-card img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/* Footer */
+footer {
+  background: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+footer .socials a {
+  color: var(--accent-color);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer .socials a:hover {
+  text-decoration: underline;
+}
+/* --- Bouton contact --- */
+.cta {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.cta a {
+  background: #2c7a2c;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.cta a:hover {
+  background: #1e531e;
+}
+/* Conteneur des statistiques */
+.stats {
+  display: flex;
+  flex-direction: row;
+  /* Alignement horizontal */
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  flex-wrap: nowrap;
+  /* Empêche le retour à la ligne */
+}
+
+.stat {
+  flex: 1;
+  max-width: 300px;
+  min-width: 250px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  border-top: 5px solid #2E7D32;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+}
+
+.stat h2 {
+  font-size: 50px;
+  color: #2E7D32;
+}
+
+.stat p {
+  font-size: 20px;
+  color: #333;
+}
+
+.stat:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, .25);
+}
+
+/* --- Menu hamburger --- */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive menu */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background: var(--primary-color);
+    position: absolute;
+    top: 60px;
+    right: -220px; /* caché hors écran */
+    width: 220px;
+    padding: 1rem;
+    border-radius: 0 0 6px 6px;
+    transition: right 0.3s ease-in-out;
+  }
+
+  nav ul.show {
+    right: 0; /* glisse vers l’écran */
+  }
+
+  nav ul li {
+    margin: 1rem 0;
+  }
+}
+
+/* Responsive stats */
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .stat {
+    max-width: 100%;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+

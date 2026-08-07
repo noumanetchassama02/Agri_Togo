@@ -1,0 +1,103 @@
+/* ==========================
+   PAGE ARTICLE ACTUALITÉ
+========================== */
+
+.article {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+}
+
+/* Titre */
+
+.article h1 {
+    text-align: center;
+    color: #2E7D32;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Date */
+
+.article .date {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+/* Image */
+
+.article img {
+    display: block;
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 20px auto;
+}
+
+/* Texte */
+
+.article p {
+    color: #444;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Bouton retour */
+
+.article a {
+    display: inline-block;
+    background: #2E7D32;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.article a:hover {
+    background: #1B5E20;
+}
+
+/* ==========================
+   HEADER ARTICLE
+========================== */
+
+.article-header {
+    background: #2E7D32;
+    color: white;
+    padding: 10px 20px;
+}
+
+
+/* ==========================
+   RESPONSIVE MOBILE
+========================== */
+
+@media(max-width:768px) {
+
+    .article {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .article h1 {
+        font-size: 1.8rem;
+    }
+
+    .article p {
+        font-size: 1rem;
+    }
+
+    .article img {
+        max-height: 250px;
+    }
+}

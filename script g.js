@@ -1,9 +1,35 @@
 // Données d’actualités
+
+
+
+
 const news = [
-  { titre: "Foire agricole régionale", date: "10/08/2026", img: "images/foire.jpeg", extrait: "Participation des producteurs AGRI‑TOGO à la foire agricole de Lomé." },
-  { titre: "Formation en techniques durables", date: "02/08/2026", img: "images/formation.jpeg", extrait: "Atelier sur l’agriculture durable pour les membres de la coopérative." },
-  { titre: "Récolte de manioc", date: "25/07/2026", img: "images/manioc&.jpeg", extrait: "La campagne de récolte du manioc a débuté dans la région des Plateaux." }
+  {
+    titre: "Foire agricole régionale",
+    date: "10/08/2026",
+    img: "images/foire.jpeg",
+    extrait: "Participation des producteurs AGRI-TOGO à la foire agricole de Lomé.",
+    lien: "foire.html",
+    classe: "foire-card"
+  },
+  {
+    titre: "Formation en techniques durables",
+    date: "02/08/2026",
+    img: "images/formation.jpeg",
+    extrait: "Atelier sur l’agriculture durable pour les membres de la coopérative.",
+    lien: "formation.html",
+    classe: "formation-card"
+  },
+  {
+    titre: "Récolte de manioc",
+    date: "25/07/2026",
+    img: "images/manioc_js.jpeg",
+    extrait: "La campagne de récolte du manioc a débuté dans la région des Plateaux.",
+    lien: "manioc.html",
+    classe: "manioc-card"
+  }
 ];
+
 
 // Injection dans la page
 const newsList = document.getElementById('news-list');
@@ -17,7 +43,7 @@ if (newsList) {
         <h3>${item.titre}</h3>
         <p><em>${item.date}</em></p>
         <p>${item.extrait}</p>
-        <a href="#">Lire la suite</a>
+        <a href="${item.lien}">Lire la suite</a>
       </div>
     `;
     newsList.appendChild(card);
@@ -90,7 +116,7 @@ actualites.forEach(actu => {
 // Validation formulaire contact
 const form = document.getElementById('contactForm');
 if (form) {
-  form.addEventListener('submit', function(e) {
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
 
     const nom = document.getElementById('nom').value.trim();
