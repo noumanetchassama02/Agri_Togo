@@ -47,6 +47,7 @@ if (newsList) {
     `;
     newsList.appendChild(card);
   });
+  armLazyImages(newsList);
 }
 
 /* ---------- Données produits ---------- */
@@ -89,6 +90,7 @@ function displayProducts(list) {
     `;
     gallery.appendChild(card);
   });
+  armLazyImages(gallery);
 }
 
 function filterProducts(cat, btn) {
@@ -154,11 +156,22 @@ const yearEl = document.getElementById('annee');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 /* ---------- Apparition progressive des images ---------- */
-document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-  if (img.complete) {
-    img.classList.add('is-loaded');
-  } else {
-    img.addEventListener('load', () => img.classList.add('is-loaded'), { once: true });
-    img.addEventListener('error', () => img.classList.add('is-loaded'), { once: true });
-  }
-});
+function armLazyImages(scope) {
+  const root = scope || document;
+  root.querySelectorAll('img[loading="lazy"]').forEach(img => {
+    if (img.classList.contains('is-loaded')) return;
+    const show = () => img.classList.add('is-loaded');
+    if (img.complete) {
+      show();
+      return;
+    }
+    img.addEventListener('load', show, { once: true });
+    img.addEventListener('error', show, { once: true });
+    // Filet de sécurité : une image chargée sans événement ne doit jamais rester invisible
+    setTimeout(() => {
+      if (img.complete) show();
+    }, 2000);
+  });
+}
+
+armLazyImages();
