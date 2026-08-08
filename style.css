@@ -21,9 +21,11 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
+  overflow-x: clip;
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', Arial, sans-serif;
@@ -151,68 +153,72 @@ nav a[aria-current="page"]::after {
    BANNIÈRE (accueil)
    ============================================= */
 .banner {
-  background: url(images/bani2.jpeg) center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 150px 20px;
-  background-image: -webkit-radial-gradient(padding);
-}
-.banner p{
-  background-color: #1e3e1e81;
-}
-.banner h1,
-.banner p {
-    background-color: #1e531e7a;
-    margin: 0;
-    padding: 15px;
-}
-.banner h1{
-  color: #fbc02d;
-}
-
-.home-hero {
-
   position: relative;
-
-  width: 100%;
-
-  height: 1000px;
-
+  isolation: isolate;
   overflow: hidden;
-
-
-  
+  color: #fff;
+  text-align: center;
+  padding: clamp(90px, 16vw, 170px) 20px;
 }
 
-
-/* Image */
-
-.home-hero .hero-image {
-
+/* Image de fond avec léger zoom (Ken Burns) */
+.banner::before {
+  content: "";
   position: absolute;
-
   inset: 0;
+  z-index: -1;
+  background: url(images/bani2.jpeg) center/cover no-repeat;
+  transform: scale(1.1);
+  animation: heroZoom 16s ease-out forwards;
 }
 
-.home-hero .hero-image img {
-
-  width: 100%;
-
-  height: 100%;
-
-  object-fit: cover;
-
-  animation: heroZoom 12s ease-out forwards;
+/* Voile de lisibilité dans les teintes de la palette */
+.banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(30, 83, 30, 0.55), rgba(18, 50, 18, 0.8));
 }
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 .banner h1 {
-  font-size: 2.6em;
-  margin-bottom: 10px;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+  color: #fbc02d;
+  font-size: clamp(1.7em, 4.5vw, 3em);
+  line-height: 1.25;
+  max-width: 18ch;
+  margin: 0 auto 0.75rem;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
 }
 
 .banner p {
-  font-size: 1.2em;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+  font-size: clamp(1.05em, 2.2vw, 1.35em);
+  max-width: 46ch;
+  margin: 0 auto;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.banner .btn {
+  margin-top: 1.75rem;
+  display: inline-block;
+  background: var(--accent-color);
+  color: var(--primary-dark);
+  font-size: 1.05rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.banner .btn:hover,
+.banner .btn:focus-visible {
+  background: #fff;
+  color: var(--primary-dark);
 }
 
 /* =============================================
@@ -898,15 +904,6 @@ footer {
     display: none;
   }
 
-  /* Bannière */
-  .banner {
-    padding: 50px 20px;
-  }
-
-  .banner h1 {
-    font-size: 1.8em;
-  }
-
   /* Stats en colonne */
   .stats {
     flex-direction: column;
@@ -954,6 +951,18 @@ footer {
   .article p {
     font-size: 1rem;
   }
+
+  /* Footer en 2 colonnes */
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+  }
 }
 
 /* =============================================
@@ -964,16 +973,18 @@ footer {
     font-size: 2em;
   }
 
-  .banner h1 {
-    font-size: 1.5em;
-  }
-
   .about h1,
   .news h1,
   .products h1,
   .contact h1,
   .article h1 {
     font-size: 1.5em;
+  }
+
+  /* Footer en 1 colonne */
+  .footer-top {
+    grid-template-columns: 1fr;
+    padding: 45px 0 35px;
   }
 }
 
@@ -990,5 +1001,117 @@ footer {
   *::after {
     transition: none !important;
     animation: none !important;
+  }
+}
+
+/* =============================================
+   PAGE 404
+   ============================================= */
+.error-page {
+  max-width: 640px;
+  margin: 3rem auto;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.error-code {
+  font-family: 'Merriweather', serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin: 0 0 0.5rem;
+  line-height: 1;
+}
+
+.error-page h1 {
+  color: var(--primary-color);
+  margin: 0 0 1rem;
+}
+
+.error-page > p:not(.error-code) {
+  color: #555;
+  max-width: 44ch;
+  margin: 0 auto 1.5rem;
+}
+
+.error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+.btn-outline {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline:hover,
+.btn-outline:focus-visible {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* =============================================
+   CHARGEMENT PROGRESSIF DES IMAGES (lazy)
+   ============================================= */
+.js img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.js img[loading="lazy"].is-loaded {
+  opacity: 1;
+}
+
+/* =============================================
+   IMPRESSION
+   ============================================= */
+@media print {
+  header,
+  footer,
+  .hamburger,
+  .cta,
+  .skip-link {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  img {
+    max-width: 100%;
   }
 }

@@ -2,6 +2,9 @@
    AGRI-TOGO — Scripts du site
    ============================================= */
 
+/* Active le mode JS (permet les fades progressifs, etc.) */
+document.documentElement.classList.add('js');
+
 /* ---------- Données des actualités ---------- */
 const news = [
   {
@@ -34,7 +37,7 @@ if (newsList) {
     const card = document.createElement('article');
     card.className = 'news-card';
     card.innerHTML = `
-      <img src="${item.img}" alt="${item.titre}">
+      <img src="${item.img}" alt="${item.titre}" loading="lazy">
       <div class="news-content">
         <h3>${item.titre}</h3>
         <p><em>${item.date}</em></p>
@@ -80,7 +83,7 @@ function displayProducts(list) {
     const card = document.createElement('article');
     card.className = 'product-card';
     card.innerHTML = `
-      <img src="${p.img}" alt="${p.nom}">
+      <img src="${p.img}" alt="${p.nom}" loading="lazy">
       <h3>${p.nom}</h3>
       <p>${p.desc}</p>
     `;
@@ -149,3 +152,13 @@ if (form) {
 /* ---------- Année dynamique dans le pied de page ---------- */
 const yearEl = document.getElementById('annee');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+/* ---------- Apparition progressive des images ---------- */
+document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+  if (img.complete) {
+    img.classList.add('is-loaded');
+  } else {
+    img.addEventListener('load', () => img.classList.add('is-loaded'), { once: true });
+    img.addEventListener('error', () => img.classList.add('is-loaded'), { once: true });
+  }
+});
