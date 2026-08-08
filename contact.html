@@ -3,73 +3,194 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AGRI‑TOGO | Contact</title>
+  <meta name="description" content="Contactez AGRI-TOGO à Lomé (Togo) : formulaire de contact, téléphone et adresse email.">
+  <meta name="theme-color" content="#2e7d32">
+  <title>AGRI-TOGO | Contact</title>
+  <link rel="icon" type="image/png" href="images/Logo_agritogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
   <!-- Header commun -->
   <header>
-    <div class="logo">
-      <img src="images/Logo_agritogo.png" alt="notre logo" width="30%">
-    </div>
-    <nav>
-      <ul>
+    <a class="logo" href="index.html" aria-label="AGRI-TOGO — Retour à l'accueil">
+      <img src="images/Logo_agritogo.png" alt="Logo AGRI-TOGO">
+    </a>
+    <nav aria-label="Navigation principale">
+      <ul id="nav-menu">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="apropos.html">À propos</a></li>
         <li><a href="produits.html">Produits</a></li>
         <li><a href="actualites.html">Actualités</a></li>
-        <li><a href="contact.html">Nous-Contacter</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
       </ul>
     </nav>
+    <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">&#9776;</button>
   </header>
 
-  <!-- Section Contact -->
-  <section class="contact">
-    <h1>Nous contacter</h1>
+  <main id="contenu">
+    <!-- Section Contact -->
+    <section class="contact">
+      <h1>Nous contacter</h1>
 
-    <div class="contact-container">
-      <!-- Formulaire -->
-      <form id="contactForm">
-        <label for="nom">Nom :</label><br>
-        <input type="text" id="nom" name="nom" required><br>
+      <div class="contact-container">
+        <!-- Formulaire -->
+        <form id="contactForm" novalidate>
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="nom" placeholder="Votre nom complet" required>
 
-        <label for="email">Email :</label><br>
-        <input type="email" id="email" name="email" required><br>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="votre@email.tg" required>
 
-        <label for="sujet">Sujet :</label><br>
-        <input type="text" id="sujet" name="sujet" required><br>
+          <label for="sujet">Sujet</label>
+          <input type="text" id="sujet" name="sujet" placeholder="Objet de votre message" required>
 
-        <label for="message">Message :</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
 
-        <button type="submit">Envoyer</button>
-      </form>
+          <button type="submit">Envoyer</button>
+          <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+        </form>
 
-      <!-- Coordonnées -->
-      <div class="infos">
-        <h2>Coordonnées</h2>
-        <p><strong>Adresse :</strong> Lomé, Région Maritime, Togo</p>
-        <p><strong>Téléphone :</strong> +228 90 00 00 00</p>
-        <p><strong>Email :</strong> contact@agritogo.tg</p>
+        <!-- Coordonnées -->
+        <div class="infos">
+          <h2>Coordonnées</h2>
+          <p><strong>Adresse :</strong> Lomé, Région Maritime, Togo</p>
+          <p><strong>Téléphone :</strong> +228 93 44 26 88</p>
+          <p><strong>Email :</strong> contact@agritogo.tg</p>
 
-        <!-- Carte -->
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.123456789!2d1.212!3d6.131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023abcd123456%3A0x9876543210!2sLom%C3%A9%2C%20Togo!5e0!3m2!1sfr!2stg!4v1690000000000"
-          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
+          <!-- Carte -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.123456789!2d1.212!3d6.131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023abcd123456%3A0x9876543210!2sLom%C3%A9%2C%20Togo!5e0!3m2!1sfr!2stg!4v1690000000000"
+            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+            title="Carte — localisation d'AGRI-TOGO à Lomé">
+          </iframe>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Footer commun -->
-  <footer>
-    <p>&copy; 2026 AGRI‑TOGO — Tous droits réservés</p>
-    <div class="socials">
-      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a>
-    </div>
-  </footer>
+  <!-- =====================================================
+     FOOTER
+===================================================== -->
 
-  <script src="script g.js"></script>
+    <footer>
+
+        <div class="footer-top">
+
+
+            <div class="footer-col footer-about">
+
+                <a href="index.html" class="footer-logo">
+
+                    AGRI<span>-TOGO</span>
+
+                </a>
+
+                <p>
+                    AGRI-TOGO est une coopérative agricole
+                    qui rassemble des producteurs des régions
+                    Maritime et Plateaux.
+                </p>
+
+                <p>
+                    Nous œuvrons pour la valorisation des
+                    produits agricoles, l'amélioration des
+                    revenus des producteurs et la promotion
+                    d'une agriculture durable au Togo.
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-col">
+
+                <h4>Navigation</h4>
+
+                <a href="index.html">Accueil</a>
+
+                <a href="apropos.html">À propos</a>
+
+                <a href="produits.html">Nos produits</a>
+
+                <a href="actualites.html">Actualités</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+
+            <div class="footer-col">
+
+                <h4>Nos produits</h4>
+
+                <a href="produits.html">Maïs</a>
+
+                <a href="produits.html">Manioc</a>
+
+                <a href="produits.html">Ananas</a>
+
+                <a href="produits.html">
+                    Produits dérivés
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-col">
+
+                <h4>Nous contacter</h4>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Lomé, Togo
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +228 93442688
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    contact@agri-togo.tg
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-leaf"></i>
+                    Maritime & Plateaux
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 AGRI-TOGO.
+                Tous droits réservés.
+            </p>
+
+            <p class="design">
+                Développé par Dev Nooma_Tech
+            </p>
+
+        </div>
+
+    </footer>
+
+  <script src="script.js"></script>
+  <script src="Menu.js"></script>
 </body>
 </html>

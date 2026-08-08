@@ -1,69 +1,183 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Récolte de manioc - AGRI-TOGO</title>
-    <link rel="stylesheet" href="manioc.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="La campagne de récolte du manioc a débuté dans la région des Plateaux pour AGRI-TOGO.">
+  <meta name="theme-color" content="#2e7d32">
+  <title>Récolte de manioc | AGRI-TOGO</title>
+  <link rel="icon" type="image/png" href="images/Logo_agritogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <div class="logo">
-        AGRI-TOGO
-    </div>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="actualites.html">Actualités</a></li>
-            <li><a href="produits.html">Produits</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+  <!-- Header commun -->
+  <header>
+    <a class="logo" href="index.html" aria-label="AGRI-TOGO — Retour à l'accueil">
+      <img src="images/Logo_agritogo.png" alt="Logo AGRI-TOGO">
+    </a>
+    <nav aria-label="Navigation principale">
+      <ul id="nav-menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="produits.html">Produits</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
-</header>
+    <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">&#9776;</button>
+  </header>
 
+  <main id="contenu">
+    <section class="article">
+      <h1>Récolte de manioc</h1>
 
-<main>
+      <p class="date">25 juillet 2026</p>
 
-<section class="article">
+      <img src="images/manioc.jpeg" alt="Récolte de manioc AGRI-TOGO">
 
-    <h1>Récolte de manioc</h1>
-
-    <p class="date">25 juillet 2026</p>
-
-    <img src="images/manioc.jpeg" alt="Récolte de manioc AGRI-TOGO">
-
-    <p>
+      <p>
         La campagne de récolte du manioc a débuté dans la région des Plateaux.
         Les producteurs membres d'AGRI-TOGO se mobilisent pour assurer une
         production de qualité.
-    </p>
+      </p>
 
-    <p>
+      <p>
         Cette récolte permettra d'approvisionner les marchés locaux et de
         renforcer la transformation du manioc en produits dérivés comme le
         gari et la farine.
-    </p>
+      </p>
 
-    <p>
+      <p>
         AGRI-TOGO accompagne les producteurs afin d'améliorer les techniques
         agricoles et de valoriser les productions locales.
-    </p>
+      </p>
 
-    <a href="actualites.html">← Retour aux actualités</a>
+      <a class="back" href="actualites.html">← Retour aux actualités</a>
+    </section>
+  </main>
 
-</section>
+  
+  <!-- =====================================================
+     FOOTER
+===================================================== -->
 
-</main>
+    <footer>
+
+        <div class="footer-top">
 
 
-<footer>
-    <p>© 2026 AGRI-TOGO - Tous droits réservés</p>
-</footer>
+            <div class="footer-col footer-about">
 
+                <a href="index.html" class="footer-logo">
+
+                    AGRI<span>-TOGO</span>
+
+                </a>
+
+                <p>
+                    AGRI-TOGO est une coopérative agricole
+                    qui rassemble des producteurs des régions
+                    Maritime et Plateaux.
+                </p>
+
+                <p>
+                    Nous œuvrons pour la valorisation des
+                    produits agricoles, l'amélioration des
+                    revenus des producteurs et la promotion
+                    d'une agriculture durable au Togo.
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-col">
+
+                <h4>Navigation</h4>
+
+                <a href="index.html">Accueil</a>
+
+                <a href="apropos.html">À propos</a>
+
+                <a href="produits.html">Nos produits</a>
+
+                <a href="actualites.html">Actualités</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+
+            <div class="footer-col">
+
+                <h4>Nos produits</h4>
+
+                <a href="produits.html">Maïs</a>
+
+                <a href="produits.html">Manioc</a>
+
+                <a href="produits.html">Ananas</a>
+
+                <a href="produits.html">
+                    Produits dérivés
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-col">
+
+                <h4>Nous contacter</h4>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Lomé, Togo
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +228 93442688
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    contact@agri-togo.tg
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-leaf"></i>
+                    Maritime & Plateaux
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 AGRI-TOGO.
+                Tous droits réservés.
+            </p>
+
+            <p class="design">
+                Développé par Dev Nooma_Tech
+            </p>
+
+        </div>
+
+    </footer>
+
+  <script src="Menu.js"></script>
 </body>
-
 </html>

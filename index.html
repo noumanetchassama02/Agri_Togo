@@ -2,72 +2,191 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AGRI‑TOGO | Accueil</title>
-  <link rel="stylesheet" href="actualites.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.  <meta name="description" content="AGRI-TOGO, coopérative agricole des régions Maritime et Plateaux au Togo : produits locaux de qualité, actualités et accompagnement des producteurs.">
+  <meta name="theme-color" content="#2e7d32">
+  <title>AGRI-TOGO | Accueil</title>
+  <link rel="icon" type="image/png" href="images/Logo_agritogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
   <!-- Header commun -->
   <header>
-     <div class="logo">
-      <img src="images/Logo_agritogo.png" alt="notre logo" width="30%">
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
+    <a class="logo" href="index.html" aria-label="AGRI-TOGO — Retour à l'accueil">
+      <img src="images/Logo_agritogo.png" alt="Logo AGRI-TOGO">
+    </a>
+    <nav aria-label="Navigation principale">
+      <ul id="nav-menu">
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
         <li><a href="apropos.html">À propos</a></li>
         <li><a href="produits.html">Produits</a></li>
         <li><a href="actualites.html">Actualités</a></li>
-        <li><a href="contact.html">Nous-contacter</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <button class="hamburger">&#9776;</button>
+    <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">&#9776;</button>
   </header>
 
-  <!-- Bannière -->
-  <section class="banner">
-    <h1>« Cultiver ensemble pour nourrir demain »</h1>
-    <p>Coopérative agricole des régions Maritime et Plateaux</p>
-  </section>
+  <main id="contenu">
+    <!-- Bannière -->
+    <section class="banner">
+      <h1>« Cultiver ensemble pour nourrir demain »</h1>
+      <p>Coopérative agricole des régions Maritime et Plateaux</p>
+    </section>
 
-  <!-- Chiffres clés -->
-  <section class="stats">
-    <div class="stat">
-      <h2>120+</h2>
-      <p>Membres</p>
-    </div>
-    <div class="stat">
-      <h2>2</h2>
-      <p>Régions couvertes</p>
-    </div>
-    <div class="stat">
-      <h2>5</h2>
-      <p>Produits phares</p>
-    </div>
-  </section>
+    <!-- Chiffres clés -->
+    <section class="stats">
+      <div class="stat">
+        <h2>120+</h2>
+        <p>Membres</p>
+      </div>
+      <div class="stat">
+        <h2>2</h2>
+        <p>Régions couvertes</p>
+      </div>
+      <div class="stat">
+        <h2>5</h2>
+        <p>Produits phares</p>
+      </div>
+    </section>
 
-  <!-- Actualités -->
-  <section class="news">
-    <h2>Dernières actualités</h2>
-    <div class="news-list" id="news-list">
-      <!-- Injecté par JS -->
-    </div>
-  </section>
+    <!-- Dernières actualités -->
+    <section class="news">
+      <h2>Dernières actualités</h2>
+      <div class="news-list" id="news-list">
+        <!-- Injecté par script.js -->
+      </div>
+    </section>
 
-  <!-- Call to Action -->
-  <div class="cta">
-    <a href="contact.html">Nous contacter</a>
-  </div>
+    <!-- Appel à l'action -->
+    <div class="cta">
+      <a href="contact.html">Nous contacter</a>
+    </div>
+  </main>
 
   <!-- Footer commun -->
-  <footer>
-    <p>&copy; 2026 AGRI‑TOGO — Tous droits réservés</p>
-    <div class="socials">
-      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a>
-    </div>
-  </footer>
+  
+  <!-- =====================================================
+     FOOTER
+===================================================== -->
 
-  <script src="script g.js"></script>
+    <footer>
+
+        <div class="footer-top">
+
+
+            <div class="footer-col footer-about">
+
+                <a href="index.html" class="footer-logo">
+
+                    AGRI<span>-TOGO</span>
+
+                </a>
+
+                <p>
+                    AGRI-TOGO est une coopérative agricole
+                    qui rassemble des producteurs des régions
+                    Maritime et Plateaux.
+                </p>
+
+                <p>
+                    Nous œuvrons pour la valorisation des
+                    produits agricoles, l'amélioration des
+                    revenus des producteurs et la promotion
+                    d'une agriculture durable au Togo.
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-col">
+
+                <h4>Navigation</h4>
+
+                <a href="index.html">Accueil</a>
+
+                <a href="apropos.html">À propos</a>
+
+                <a href="produits.html">Nos produits</a>
+
+                <a href="actualites.html">Actualités</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+
+            <div class="footer-col">
+
+                <h4>Nos produits</h4>
+
+                <a href="produits.html">Maïs</a>
+
+                <a href="produits.html">Manioc</a>
+
+                <a href="produits.html">Ananas</a>
+
+                <a href="produits.html">
+                    Produits dérivés
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-col">
+
+                <h4>Nous contacter</h4>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Lomé, Togo
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +228 93442688
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    contact@agri-togo.tg
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-leaf"></i>
+                    Maritime & Plateaux
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 AGRI-TOGO.
+                Tous droits réservés.
+            </p>
+
+            <p class="design">
+                Développé par Dev Nooma_Tech & R.E.M
+            </p>
+
+        </div>
+
+    </footer>
+
+  <script src="script.js"></script>
+  <script src="Menu.js"></script>
 </body>
 </html>

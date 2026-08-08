@@ -3,54 +3,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AGRI‑TOGO | Produits</title>
+  <meta name="description" content="Maïs, manioc, ananas, farine, gari, jus d'ananas : découvrez les produits de la coopérative agricole AGRI-TOGO.">
+  <meta name="theme-color" content="#2e7d32">
+  <title>AGRI-TOGO | Produits</title>
+  <link rel="icon" type="image/png" href="images/Logo_agritogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
   <!-- Header commun -->
   <header>
-    <div class="logo">
-      <img src="images/Logo_agritogo.png" alt="notre logo" width="30%">
-    </div>
-    <nav>
-      <ul>
+    <a class="logo" href="index.html" aria-label="AGRI-TOGO — Retour à l'accueil">
+      <img src="images/Logo_agritogo.png" alt="Logo AGRI-TOGO">
+    </a>
+    <nav aria-label="Navigation principale">
+      <ul id="nav-menu">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="apropos.html">À propos</a></li>
-        <li><a href="produits.html">Produits</a></li>
+        <li><a href="produits.html" aria-current="page">Produits</a></li>
         <li><a href="actualites.html">Actualités</a></li>
-        <li><a href="contact.html">Nous-contacter</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">&#9776;</button>
   </header>
 
-  <!-- Galerie Produits -->
-  <section class="products">
-    <h1>Nos Produits</h1>
+  <main id="contenu">
+    <!-- Galerie produits -->
+    <section class="products">
+      <h1>Nos Produits</h1>
 
-    <!-- Filtres -->
-    <div class="filters">
-      <button onclick="filterProducts('all')">Tous</button>
-      <button onclick="filterProducts('cereales')">Céréales</button>
-      <button onclick="filterProducts('tubercules')">Tubercules</button>
-      <button onclick="filterProducts('fruits')">Fruits</button>
-      <button onclick="filterProducts('transformes')">Produits transformés</button>
-    </div>
+      <!-- Filtres -->
+      <div class="filters" role="group" aria-label="Filtrer les produits">
+        <button data-filter="all" class="active" aria-pressed="true">Tous</button>
+        <button data-filter="cereales" aria-pressed="false">Céréales</button>
+        <button data-filter="tubercules" aria-pressed="false">Tubercules</button>
+        <button data-filter="fruits" aria-pressed="false">Fruits</button>
+        <button data-filter="transformes" aria-pressed="false">Produits transformés</button>
+      </div>
 
-    <!-- Galerie -->
-    <div class="gallery" id="gallery">
-      <!-- Injecté par JS -->
-    </div>
-  </section>
+      <!-- Galerie -->
+      <div class="gallery" id="gallery">
+        <!-- Injecté par script.js -->
+      </div>
+    </section>
+  </main>
 
-  <!-- Footer commun -->
-  <footer>
-    <p>&copy; 2026 AGRI‑TOGO — Tous droits réservés</p>
-    <div class="socials">
-      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a>
-    </div>
-  </footer>
+  
+  <!-- =====================================================
+     FOOTER
+===================================================== -->
 
-  <script src="script g.js"></script>
+    <footer>
+
+        <div class="footer-top">
+
+
+            <div class="footer-col footer-about">
+
+                <a href="index.html" class="footer-logo">
+
+                    AGRI<span>-TOGO</span>
+
+                </a>
+
+                <p>
+                    AGRI-TOGO est une coopérative agricole
+                    qui rassemble des producteurs des régions
+                    Maritime et Plateaux.
+                </p>
+
+                <p>
+                    Nous œuvrons pour la valorisation des
+                    produits agricoles, l'amélioration des
+                    revenus des producteurs et la promotion
+                    d'une agriculture durable au Togo.
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-col">
+
+                <h4>Navigation</h4>
+
+                <a href="index.html">Accueil</a>
+
+                <a href="apropos.html">À propos</a>
+
+                <a href="produits.html">Nos produits</a>
+
+                <a href="actualites.html">Actualités</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+
+            <div class="footer-col">
+
+                <h4>Nos produits</h4>
+
+                <a href="produits.html">Maïs</a>
+
+                <a href="produits.html">Manioc</a>
+
+                <a href="produits.html">Ananas</a>
+
+                <a href="produits.html">
+                    Produits dérivés
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-col">
+
+                <h4>Nous contacter</h4>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Lomé, Togo
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +228 93442688
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    contact@agri-togo.tg
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-leaf"></i>
+                    Maritime & Plateaux
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 AGRI-TOGO.
+                Tous droits réservés.
+            </p>
+
+            <p class="design">
+                Développé par Dev Nooma_Tech
+            </p>
+
+        </div>
+
+    </footer>
+  <script src="script.js"></script>
+  <script src="Menu.js"></script>
 </body>
 </html>
