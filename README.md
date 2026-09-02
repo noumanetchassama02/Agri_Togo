@@ -14,7 +14,7 @@
 
 **AGRI-TOGO** est une coopérative agricole *(fictive, à usage pédagogique)* regroupant des producteurs de la région **Maritime** et des **Plateaux** au Togo. Elle valorise des produits locaux — maïs, manioc, ananas — ainsi que des produits transformés (farines, jus, gari), et accompagne ses membres dans la commercialisation et la formation aux bonnes pratiques agricoles.
 
-La coopérative ne disposait jusqu'ici d'**aucune présence en ligne**. Ce projet répond à son besoin d'un site vitrine simple, moderne et responsive permettant de :
+La coopérative ne disposait jusqu'ici d'**aucune présence en ligne**. Ce projet répond à son besoin d'un site vitrine simple; moderne et responsive permettant de :
 
 1. Présenter la coopérative, ses membres et ses valeurs ;
 2. Mettre en avant les produits et activités ;
