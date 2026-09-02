@@ -743,14 +743,12 @@ footer {
 
   font-size: 1rem;
 
-  margin-bottom: 22px;
+  margin-bottom: 8px;
 
-  padding-bottom: 12px;
+  
 }
 
 .footer-col h4::after {
-
-  content: "";
 
   position: absolute;
 
@@ -787,9 +785,9 @@ footer {
 
   color: rgba(255, 255, 255, .75);
 
-  font-size: .88rem;
+  font-size: 1rem;
 
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 
   transition: var(--transition);
   text-decoration: none;
@@ -829,7 +827,7 @@ footer {
 
   color: rgba(255, 255, 255, .75);
 
-  font-size: .88rem;
+  font-size: 0.88rem;
 
   text-decoration: none;
 
@@ -1121,6 +1119,10 @@ footer {
   font-weight: 600;
   text-decoration: none;
   transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.image2{
+  width: 63px;
 }
 
 .btn-primary {
