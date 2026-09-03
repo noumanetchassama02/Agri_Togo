@@ -57,7 +57,7 @@ La coopérative ne disposait jusqu'ici d'**aucune présence en ligne**. Ce proje
 - ✅ Mise en page entièrement responsive (mobile, tablette, ordinateur).
 
 ### Bonus (facultatives)
-- ⭐ Filtrage dynamique des produits par catégorie (JavaScript) ;
+- ⭐ Filtrage dynamique des produits par catégorie (JavaScript);
 - ⭐ Animations légères au défilement (scroll reveal) ;
 - ⭐ Bouton de bascule mode sombre / mode clair.
 
@@ -91,7 +91,7 @@ agri-togo/
 │   └── script.js
 ├── images/
 └── README.md
-```
+
 
 ---
 
