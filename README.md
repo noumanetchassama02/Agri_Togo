@@ -147,9 +147,9 @@ Le site s'ouvre localement dans le navigateur sans erreur console.
 - TCHASSAMA Noumane
 
 **Formateur :**
-- GBADAMASSI Abdou-Akim
+- Mr GBADAMASSI Abdou-Akim
 
----
+---àpos",
 
 ## 📄 Licence
 
